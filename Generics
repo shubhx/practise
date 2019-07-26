@@ -1,0 +1,13 @@
+public class GenericsIMPL {
+ 
+    static<T> void getGenerics(T elements){
+        System.out.println(elements.getClass().getName() + " = " + elements);
+        }
+ 
+ 
+    public static void main(String Args[]){               
+                getGenerics(1);
+                getGenerics("Shubham");
+                getGenerics(1.112);
+                }  
+}
