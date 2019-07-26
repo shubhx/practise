@@ -1,0 +1,22 @@
+package com.nucleus;
+
+public class FibonacciSeries {
+   
+    static int getFibonacci(int i){
+            int j = 0;
+            int l = 1;
+            int m;
+            for(int k = 2; k <=i; k++){
+                m = j + l ;
+                j = l;
+                l = m;
+                }
+            System.out.println(l);
+            return l;
+        }
+
+    public static void main(String[] args) {  
+        int i = 9;
+        getFibonacci(i);
+    }
+}
