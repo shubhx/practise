@@ -1,0 +1,43 @@
+package com.nucleus;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+public class ComparableImpl implements Comparable<ComparableImpl> {
+    
+        private double rating; 
+        private String name; 
+        private int year;
+        
+    public double getRating() { return rating; } 
+        public String getName()   {  return name; } 
+        public int getYear()      {  return year;  } 
+    
+    public ComparableImpl(String name,double rating,int year) {
+       this.rating = rating;
+       this.name = name;
+       this.year = year;
+    }
+    
+    public int compareTo(ComparableImpl o) {
+        return  o.year-this.year;
+    }
+    public static void main(String[] args) {
+        ArrayList<ComparableImpl> list = new ArrayList<ComparableImpl>(); 
+                list.add(new ComparableImpl("Force Awakens", 8.3, 2015)); 
+                list.add(new ComparableImpl("Star Wars", 8.7, 1977)); 
+                list.add(new ComparableImpl("Empire Strikes Back", 8.8, 1980)); 
+                list.add(new ComparableImpl("Return of the Jedi", 8.4, 1983));
+                
+                Collections.sort(list); 
+                
+                System.out.println("Movies after sorting : "); 
+                for (ComparableImpl movie: list) 
+                { 
+                    System.out.println(movie.getName() + " " + 
+                                       movie.getRating() + " " + 
+                                       movie.getYear()); 
+                } 
+    }
+}
