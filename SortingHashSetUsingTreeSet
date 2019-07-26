@@ -1,0 +1,27 @@
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class HashSetIMPL {
+  static   HashSet getVal(){
+    HashSet<String> s1 = new HashSet<String>();
+    s1.add("Ajay");
+    s1.add("Shubham");
+    s1.add("Rahul");
+    s1.add("Ajay");
+return s1;
+    }
+    public static void main(String Args[]){
+          HashSet<String> s2 =   getVal();
+        TreeSet<String> sorted = new TreeSet<String>(s2);
+        System.out.println(sorted);
+          Iterator <String> itr = sorted.iterator();
+          for(String val : sorted){
+              System.out.println(val);
+              }
+         
+//          while(itr.hasNext()){
+//              System.out.println(s2);
+//          }
+    }
+}
