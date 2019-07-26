@@ -1,0 +1,36 @@
+package com.nucleus;
+
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class ConcurrentMAP {
+    
+    public static void main (String Args[]){ 
+    ConcurrentHashMap<Integer,String> hm = new ConcurrentHashMap<Integer,String>();
+        hm.put(1, "Shubham");
+        hm.put(2, "Shubha");
+        hm.put(3, "Shubh");
+        hm.put(4, "Shub");
+        hm.put(5, "Shu");
+        
+        Iterator<Map.Entry<Integer,String>> itr = hm.entrySet().iterator(); 
+     //  Iterator it = hm.entrySet().iterator();
+        System.out.println("value of IT==>" +itr.toString());
+       while(itr.hasNext()){
+//            System.out.println("Inside loop");
+               hm.remove(2);
+               hm.put(6, "Shubhamh sjarma");
+//          
+        }
+        System.out.println(hm);
+//        for(String val : hm.values()){
+//           
+//        hm.remove(2);
+//        hm.put(6, "Shubhamhsjarma");
+//        System.out.println(val); 
+//        }
+        System.out.println(hm.toString());
+    }
+}
