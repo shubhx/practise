@@ -1,0 +1,27 @@
+package com.nucleus;
+
+import java.util.ArrayList;
+
+public class ConactToArray {
+    public ConactToArray() {
+        super();
+    }
+
+    public static void main(String[] args) {
+        String name = "Shubham";
+        ArrayList<String> al = new ArrayList<String>();
+        ArrayList<String> al1 = new ArrayList<String>();
+        
+        for(int i = 0; i < name.length(); i++){
+            String s = Character.toString(name.charAt(i));
+            al.add(s);
+            }
+        for(int k = al.size()-1; k>=0; k--)
+        {
+            
+            al1.add(al.get(k));
+        }
+        System.out.println(al.toString());
+        System.out.println(al1.toString());
+    }
+}
