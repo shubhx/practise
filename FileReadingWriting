@@ -1,0 +1,30 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileHandling {
+    public FileHandling() {
+        super();
+    }
+    
+    public static void main(String Args[]){
+    
+    File  f = new File("//10.1.56.142/Shared_Folder/Release/Patches/LTF/Patches/CLI_FILE_GENERATION_ISSUE/DOCUMENT/CLI110084_46_28-MAY-19.csv");    
+        System.out.println(f.exists());
+        long i = f.lastModified();
+        System.out.println(i);
+        
+    FileWriter fw;
+   
+
+        try {
+            fw = new FileWriter("//10.1.56.187/Shared_Folder/Release/Patches/LTF/Patches/CLI_FILE_GENERATION_ISSUE/DOCUMENT/shubham.txt");
+            fw.write("Shubham Sharma is a good developer"); 
+            fw.close();
+            System.out.println("File written");
+            
+        } catch (IOException e) {
+            System.out.println("Exception is == > " +e);
+        }
+    }
+}
