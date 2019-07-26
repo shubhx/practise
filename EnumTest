@@ -1,0 +1,15 @@
+public class EnumIMPL {
+   
+    public enum GetVal{shubham,sharma;
+        
+        private static final long serialVersionUID = 1L;
+    };
+    
+    public static void main(String Args[]){
+        for(GetVal g : GetVal.values())
+        {
+          System.out.println("value of enum is ==== >  "  
+                             +     g)  ;
+            }
+        }
+}
