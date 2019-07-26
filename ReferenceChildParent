@@ -1,0 +1,19 @@
+class a1 {
+    int x = 10;
+}
+
+class b1 extends a1 {
+    int x = 30;
+
+}
+public class ReferenceChildParent {
+
+    public static void main(String[] args) {
+        b1 myclass = new b1();
+        a1 myclass2 = myclass;
+        int h = myclass2.x;
+        System.out.println(h);
+
+    }
+
+}
